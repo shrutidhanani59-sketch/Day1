@@ -44,10 +44,47 @@ int main()
     for(int i=0; i<num; i++)
     {
         cout<<arr[i]<<" ";
-    }    
-    
-    default:
-        break;
     }
+    break;
+    case 3:
+    int pos;
+    cout<<"Enter the position of element to remove";
+    cin>>pos;
+    if(pos>=0 && pos<num)
+    {
+        for(int i=pos-1; i<num-1; i++)
+        {
+            arr[i]=arr[i+1];
+        }
+        num--;
+        cout<<endl<<"Element delated successfully";
+    }
+    else{
+        cout<<endl<<"position is not vaild";
+    }
+    break;
+
+    case 4:
+    int poss;
+    int val;
+    cout<<"Enter the position of element to add";
+    cin>>poss;
+    cout<<"Enter the value";
+    cin>>val;
+    if(poss>=0 && poss<num)
+    {
+        
+               arr[poss-1]=val;
+               cout<<"Element updated";
+        
+    }
+    else
+    {
+        cout<<"Position is not valid";
+    }
+    break;
+    case 5:
+    cout<<"Exit";
+}
     }
 }
